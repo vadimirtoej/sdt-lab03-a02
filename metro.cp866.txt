@@ -1,0 +1,107 @@
+line "Калининская"
+    station "Новокосино"
+    station "Новогиреево"
+    station "Шоссе Энтузиастов"
+    station "Авиамоторная"
+    station "Площадь Ильича"
+        transit to station "Римская" of "Люблинско-Дмитровская" line
+    station "Марксистская"
+        transit to station "Таганская" of "Кольцевая" line
+        transit to station "Таганская" of "Таганско-Краснопресненская" line
+    station "Третьяковская"
+        transit to station "Третьяковская" of "Калужско-Рижская" line
+        transit to station "Новокузнецкая" of "Замоскворецкая" line
+
+line "Люблинско-Дмитровская"
+    station "Петровско-Разумовская"
+        transit to station "Петровско-Разумовская" of "Серпуховско-Тимирязевская" line
+    station "Фонвизинская"
+    station "Бутырская"
+    station "Марьина Роща"
+    station "Достоевская"
+    station "Трубная"
+        transit to station "Цветной бульвар" of "Серпуховско-Тимирязевская" line
+    station "Сретенский бульвар"
+        transit to station "Чистые пруды" of "Сокольническая" line
+        transit to station "Тургеневская" of "Калужско-Рижская" line
+    station "Чкаловская"
+        transit to station "Курская" of "Арбатско-Покровская" line
+        transit to station "Курская" of "Кольцевая" line
+    station "Римская"
+        transit to station "Площадь Ильича" of "Калининская" line
+    station "Крестьянская застава"
+        transit to station "Пролетарская" of "Таганско-Краснопресненская" line
+    station "Дубровка"
+    station "Кожуховская"
+    station "Печатники"
+    station "Волжская"
+    station "Люблино"
+    station "Братиславская"
+    station "Марьино"
+    station "Борисово"
+    station "Шипиловская"
+    station "Зябликово"
+        transit to station "Красногвардейская" of "Замоскворецкая" line
+
+line "Кольцевая"
+    station "Киевская"
+        transit to station "Киевская" of "Арбатско-Покровская" line
+        transit to station "Киевская" of "Филевская" line
+    station "Краснопресненская"
+        transit to station "Баррикадная" of "Таганско-Краснопресненская" line
+    station "Белорусская"
+        transit to station "Белорусская" of "Замоскворецкая" line
+    station "Новослободская"
+        transit to station "Менделеевская" of "Серпуховско-Тимирязевская" line
+    station "Проспект Мира"
+        transit to station "Проспект Мира" of "Калужско-Рижская" line
+    station "Комсомольская"
+        transit to station "Комсомольская" of "Сокольническая" line
+    station "Курская"
+        transit to station "Чкаловская" of "Люблинско-Дмитровская" line
+        transit to station "Курская" of "Арбатско-Покровская" line
+    station "Таганская"
+        transit to station "Марксистская" of "Калининская" line
+        transit to station "Таганская" of "Таганско-Краснопресненская" line
+    station "Павелецкая"
+        transit to station "Павелецкая" of "Замоскворецкая" line
+    station "Добрынинская"
+        transit to station "Серпуховская" of "Серпуховско-Тимирязевская" line
+    station "Октябрьская"
+        transit to station "Октябрьская" of "Калужско-Рижская" line
+    station "Парк культуры"
+        transit to station "Парк культуры" of "Сокольническая" line
+
+line "Арбатско-Покровская"
+    station "Щёлковская"
+    station "Первомайская"
+    station "Измайловская"
+    station "Партизанская"
+    station "Семёновская"
+    station "Электрозаводская"
+    station "Бауманская"
+    station "Курская"
+        transit to station "Чкаловская" of "Люблинско-Дмитровская" line
+        transit to station "Курская" of "Кольцевая" line
+    station "Площадь Революции"
+        transit to station "Театральная" of "Замоскворецкая" line
+    station "Арбатская"
+        transit to station "Александровский сад" of "Филевская" line
+        transit to station "Библиотека имени Ленина" of "Сокольническая" line
+    station "Смоленская"
+    station "Киевская"
+        transit to station "Киевская" of "Кольцевая" line
+        transit to station "Киевская" of "Филевская" line
+    station "Парк Победы"
+        transit to station "Парк Победы" of "Солнцевская" line
+    station "Славянский бульвар"
+    station "Кунцевская"
+        transit to station "Кунцевская" of "Филевская" line
+    station "Молодёжная"
+    station "Крылатское"
+    station "Троице-Лыково"
+    station "Строгино"
+    station "Мякинино"
+    station "Волоколамская"
+    station "Митино"
+    station "Пятницкое шоссе"
