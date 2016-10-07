@@ -50,7 +50,7 @@ LibPath                := $(LibraryPathSwitch).
 AR       := ar rcus
 CXX      := g++
 CC       := gcc
-CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
+CXXFLAGS :=  -g -std=c++11 -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
 AS       := as
@@ -60,7 +60,7 @@ AS       := as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) $(IntermediateDirectory)/input.cc$(ObjectSuffix) $(IntermediateDirectory)/transit.cc$(ObjectSuffix) $(IntermediateDirectory)/parser.cc$(ObjectSuffix) $(IntermediateDirectory)/output.cc$(ObjectSuffix) $(IntermediateDirectory)/metro.cc$(ObjectSuffix) $(IntermediateDirectory)/station.cc$(ObjectSuffix) $(IntermediateDirectory)/line.cc$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/input.cc$(ObjectSuffix) $(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) $(IntermediateDirectory)/line.cc$(ObjectSuffix) $(IntermediateDirectory)/metro.cc$(ObjectSuffix) $(IntermediateDirectory)/output.cc$(ObjectSuffix) $(IntermediateDirectory)/parser.cc$(ObjectSuffix) $(IntermediateDirectory)/station.cc$(ObjectSuffix) $(IntermediateDirectory)/transit.cc$(ObjectSuffix) 
 
 
 
@@ -99,14 +99,6 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) "main.cpp"
 
-$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix): lec_4.cpp $(IntermediateDirectory)/lec_4.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/lec_4.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/lec_4.cpp$(DependSuffix): lec_4.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/lec_4.cpp$(DependSuffix) -MM "lec_4.cpp"
-
-$(IntermediateDirectory)/lec_4.cpp$(PreprocessSuffix): lec_4.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/lec_4.cpp$(PreprocessSuffix) "lec_4.cpp"
-
 $(IntermediateDirectory)/input.cc$(ObjectSuffix): input.cc $(IntermediateDirectory)/input.cc$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/input.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/input.cc$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/input.cc$(DependSuffix): input.cc
@@ -115,29 +107,21 @@ $(IntermediateDirectory)/input.cc$(DependSuffix): input.cc
 $(IntermediateDirectory)/input.cc$(PreprocessSuffix): input.cc
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/input.cc$(PreprocessSuffix) "input.cc"
 
-$(IntermediateDirectory)/transit.cc$(ObjectSuffix): transit.cc $(IntermediateDirectory)/transit.cc$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/transit.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/transit.cc$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/transit.cc$(DependSuffix): transit.cc
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/transit.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/transit.cc$(DependSuffix) -MM "transit.cc"
+$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix): lec_4.cpp $(IntermediateDirectory)/lec_4.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/lec_4.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/lec_4.cpp$(DependSuffix): lec_4.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/lec_4.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/lec_4.cpp$(DependSuffix) -MM "lec_4.cpp"
 
-$(IntermediateDirectory)/transit.cc$(PreprocessSuffix): transit.cc
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/transit.cc$(PreprocessSuffix) "transit.cc"
+$(IntermediateDirectory)/lec_4.cpp$(PreprocessSuffix): lec_4.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/lec_4.cpp$(PreprocessSuffix) "lec_4.cpp"
 
-$(IntermediateDirectory)/parser.cc$(ObjectSuffix): parser.cc $(IntermediateDirectory)/parser.cc$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/parser.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/parser.cc$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/parser.cc$(DependSuffix): parser.cc
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/parser.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/parser.cc$(DependSuffix) -MM "parser.cc"
+$(IntermediateDirectory)/line.cc$(ObjectSuffix): line.cc $(IntermediateDirectory)/line.cc$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/line.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/line.cc$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/line.cc$(DependSuffix): line.cc
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/line.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/line.cc$(DependSuffix) -MM "line.cc"
 
-$(IntermediateDirectory)/parser.cc$(PreprocessSuffix): parser.cc
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/parser.cc$(PreprocessSuffix) "parser.cc"
-
-$(IntermediateDirectory)/output.cc$(ObjectSuffix): output.cc $(IntermediateDirectory)/output.cc$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/output.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/output.cc$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/output.cc$(DependSuffix): output.cc
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/output.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/output.cc$(DependSuffix) -MM "output.cc"
-
-$(IntermediateDirectory)/output.cc$(PreprocessSuffix): output.cc
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/output.cc$(PreprocessSuffix) "output.cc"
+$(IntermediateDirectory)/line.cc$(PreprocessSuffix): line.cc
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/line.cc$(PreprocessSuffix) "line.cc"
 
 $(IntermediateDirectory)/metro.cc$(ObjectSuffix): metro.cc $(IntermediateDirectory)/metro.cc$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/metro.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/metro.cc$(ObjectSuffix) $(IncludePath)
@@ -147,6 +131,22 @@ $(IntermediateDirectory)/metro.cc$(DependSuffix): metro.cc
 $(IntermediateDirectory)/metro.cc$(PreprocessSuffix): metro.cc
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/metro.cc$(PreprocessSuffix) "metro.cc"
 
+$(IntermediateDirectory)/output.cc$(ObjectSuffix): output.cc $(IntermediateDirectory)/output.cc$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/output.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/output.cc$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/output.cc$(DependSuffix): output.cc
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/output.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/output.cc$(DependSuffix) -MM "output.cc"
+
+$(IntermediateDirectory)/output.cc$(PreprocessSuffix): output.cc
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/output.cc$(PreprocessSuffix) "output.cc"
+
+$(IntermediateDirectory)/parser.cc$(ObjectSuffix): parser.cc $(IntermediateDirectory)/parser.cc$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/parser.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/parser.cc$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/parser.cc$(DependSuffix): parser.cc
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/parser.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/parser.cc$(DependSuffix) -MM "parser.cc"
+
+$(IntermediateDirectory)/parser.cc$(PreprocessSuffix): parser.cc
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/parser.cc$(PreprocessSuffix) "parser.cc"
+
 $(IntermediateDirectory)/station.cc$(ObjectSuffix): station.cc $(IntermediateDirectory)/station.cc$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/station.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/station.cc$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/station.cc$(DependSuffix): station.cc
@@ -155,13 +155,13 @@ $(IntermediateDirectory)/station.cc$(DependSuffix): station.cc
 $(IntermediateDirectory)/station.cc$(PreprocessSuffix): station.cc
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/station.cc$(PreprocessSuffix) "station.cc"
 
-$(IntermediateDirectory)/line.cc$(ObjectSuffix): line.cc $(IntermediateDirectory)/line.cc$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/line.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/line.cc$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/line.cc$(DependSuffix): line.cc
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/line.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/line.cc$(DependSuffix) -MM "line.cc"
+$(IntermediateDirectory)/transit.cc$(ObjectSuffix): transit.cc $(IntermediateDirectory)/transit.cc$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/stud/Documents/NovikovD/sdt-lab03-a01/transit.cc" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/transit.cc$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/transit.cc$(DependSuffix): transit.cc
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/transit.cc$(ObjectSuffix) -MF$(IntermediateDirectory)/transit.cc$(DependSuffix) -MM "transit.cc"
 
-$(IntermediateDirectory)/line.cc$(PreprocessSuffix): line.cc
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/line.cc$(PreprocessSuffix) "line.cc"
+$(IntermediateDirectory)/transit.cc$(PreprocessSuffix): transit.cc
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/transit.cc$(PreprocessSuffix) "transit.cc"
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

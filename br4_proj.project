@@ -2,6 +2,20 @@
 <CodeLite_Project Name="br4_proj" InternalType="Console">
   <Description/>
   <Dependencies/>
+  <VirtualDirectory Name="src">
+    <File Name="main.cpp"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="sdt-lab03-a01">
+    <File Name="input.cc"/>
+    <File Name="lec_4.cpp"/>
+    <File Name="line.cc"/>
+    <File Name="metro.cc"/>
+    <File Name="metro.h"/>
+    <File Name="output.cc"/>
+    <File Name="parser.cc"/>
+    <File Name="station.cc"/>
+    <File Name="transit.cc"/>
+  </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
       <Compiler Options="" C_Options="" Assembler="">
@@ -13,7 +27,7 @@
       <ResourceCompiler Options=""/>
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="gnu g++" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
-      <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
+      <Compiler Options="-g;-std=c++11;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
         <IncludePath Value="."/>
       </Compiler>
       <Linker Options="" Required="yes"/>
@@ -90,18 +104,4 @@
       </Completion>
     </Configuration>
   </Settings>
-  <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-  </VirtualDirectory>
-  <VirtualDirectory Name="sdt-lab03-a01">
-    <File Name="lec_4.cpp"/>
-    <File Name="input.cc"/>
-    <File Name="transit.cc"/>
-    <File Name="parser.cc"/>
-    <File Name="output.cc"/>
-    <File Name="metro.cc"/>
-    <File Name="metro.h"/>
-    <File Name="station.cc"/>
-    <File Name="line.cc"/>
-  </VirtualDirectory>
 </CodeLite_Project>

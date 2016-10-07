@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/input.cc.o ./Debug/lec_4.cpp.o ./Debug/line.cc.o ./Debug/metro.cc.o ./Debug/output.cc.o ./Debug/parser.cc.o ./Debug/station.cc.o ./Debug/transit.cc.o
